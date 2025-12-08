@@ -37,27 +37,29 @@
   cursor: pointer; 
 }
 #help-content { 
+  height: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1em;
+  justify-items: center;
   background: red; 
-  padding: 20px; 
-  border-radius: 10px;
-  max-width: 500px; 
-  width: 90%; 
-  max-height: 80vh; 
-  overflow-y: auto; 
 }
 .level { 
   display: none; 
 }
 .level.active { 
-  display: block; 
+  display: grid; 
+  grid-template-rows: 100px 1fr;
 }
 .btn { 
-  display: block; 
-  width: 100%; 
-  padding: 15px; 
-  margin: 5px 0; 
+  display: grid; 
+  grid-template-rows: 1fr;
+  gap: 10px;
+  width: 80%; 
+  padding: 15px;
   background: #f8f9fa; 
-  border: 1px solid #ddd; 
+  border: 1px solid black; 
   border-radius: 5px; 
   cursor: pointer; 
   transition: background 0.3s; 
