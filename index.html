@@ -1,9 +1,15 @@
-<div id="help-widget">
-  <button id="help-toggle" class="help-toggle">Need help? Click here</button>
-  <div id="help-modal" class="help-modal hidden">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanopolo Shop Help</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="help-widget">
     <div class="help-header">
       <button id="lang-toggle" class="lang-toggle">EN/NL</button>
-      <button id="close-modal" class="close-modal">&times;</button>
     </div>
     <div id="help-content">
       <!-- Main level -->
@@ -19,7 +25,7 @@
           <button class="btn" data-next="level-contact">7. <span data-key="btn-contact">Direct contact</span></button>
         </div>
       </div>
-      <!-- Sub-levels -->
+      <!-- Sub-levels (same as before, truncated for brevity) -->
       <div id="level-order" class="level">
         <h2 data-key="order-title">Questions about my order</h2>
         <div class="buttons">
@@ -31,8 +37,8 @@
         </div>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
-      <!-- Repeat similar structure for other levels: availability, details, delivery, events, teaming, contact -->
-      <div id="level-availability" class="level">
+      <!-- Add the other levels here (availability, details, etc.) as in the original index.html -->
+       <div id="level-availability" class="level">
         <h2 data-key="availability-title">Product availability</h2>
         <div class="buttons">
           <button class="btn" data-action="summary" data-summary="Is a certain product available">Is a certain product available</button>
@@ -107,4 +113,6 @@
       </div>
     </div>
   </div>
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
