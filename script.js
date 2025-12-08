@@ -71,15 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load path from storage
   path = JSON.parse(sessionStorage.getItem('helpPath') || '[]');
 
-  // Toggle modal
-  document.getElementById('help-toggle').addEventListener('click', () => {
-    document.getElementById('help-modal').classList.remove('hidden');
-    showLevel('level-main');
-  });
-  document.getElementById('close-modal').addEventListener('click', () => {
-    document.getElementById('help-modal').classList.add('hidden');
-  });
-
   // Language toggle
   document.getElementById('lang-toggle').addEventListener('click', () => {
     currentLang = currentLang === 'en' ? 'nl' : 'en';
@@ -89,4 +80,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // Button navigation
   document.addEventListener('click', (e) => {
     if (e.target.classList.contains('btn')) {
-      const next
+      const next = e.target.getAttribute('data-next');
+      const action = e.target.getAttribute('data-action');
+      if (next) {
+        logPath(e.target.textContent.trim());
+        showLevel(next);
+      } else if (action === 'summary') {
+        logPath(e.target.getAttribute('data-summary'));
+        showLevel('level-summary');
+        document.getElementById('path-display').textContent = path.join(' > ');
+      }
+    }
+    if (e.target.classList.contains('back-btn')) {
+      const back = e.target.getAttribute('data-back');
+      if (back) {
+        showLevel(back);
+      }
+    }
+  });
+
+  // Contact form submission
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    // Placeholder: Log to console (replace with API call)
+    console.log('Sending to staff:', { path, email, message });
+    alert('Thank you! Your message has been sent.'); // Simple feedback
+    // Reset path and go back
+    path = [];
+    sessionStorage.removeItem('helpPath');
+    showLevel('level-main');
+  });
+
+  // Initial language update
+  updateLanguage();
+});
