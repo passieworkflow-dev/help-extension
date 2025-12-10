@@ -25,7 +25,7 @@
           <button class="btn" data-next="level-contact"><span data-key="btn-contact">Direct contact</span></button>
         </div>
       </div>
-      <!-- Sub-levels (same as before, truncated for brevity) -->
+      <!-- Sub-levels  -->
       
       <div id="level-order" class="level">
         <h2 data-key="order-title">Questions about my order</h2>
@@ -38,7 +38,29 @@
           <button class="back-btn" data-back="level-main">Back</button>
         </div>
       </div>
-      <!-- Add the other levels here (availability, details, etc.) as in the original index.html -->
+       <!-- level 3 step for ADDING TO ORDER -->
+      <div id="level-add-order-confirm" class="level">
+        <h2>Confirm Adding to Order</h2>
+        <p>Are you sure you want to add something? This may affect shipping or pricing.</p>
+        <div class="buttons">
+          <button class="btn" data-next="level-add-order-details" data-summary="Yes, I want to add an item">Yes, I want to add an item</button>
+          <button class="btn" data-next="level-add-order-why-not" data-summary="No, just checking">No, just checking</button>
+          <button class="back-btn" data-back="level-order"></button>
+        </div>
+      </div>
+      <!-- level 4 step for YES -->
+      <div id="level-add-order-details" class="level">
+        <h2>What do you want to add?</h2>
+        <p>Please choose something from the dropdown.</p>
+        <div class="buttons">
+          <button class="btn" data-next="level-add-order-quantity" data-summary="add your mom">Add your mom</button>
+          <button class="btn" data-next="level-add-order-quantity" data-summary="add your dad">Add your dad</button>
+          <button class="btn" data-next="level-add-order-quantity" data-summary="add your sister">Add your sister</button>
+          <button class="btn" data-next="level-add-order-quantity" data-summary="add your brother">Add your brother</button>
+          <button class="back-btn" data-back="level-add-order-confirm"></button>
+        </div>
+      </div>
+      <!-- level 2 product AVAILABILITY -->
        <div id="level-availability" class="level">
         <h2 data-key="availability-title">Product availability</h2>
         <div class="buttons">
@@ -98,6 +120,8 @@
           <button class="back-btn" data-back="level-main">Back</button>
         </div>
       </div>
+      <!-- adding level 3 steps -->
+     
       <!-- Summary/Contact Form -->
       <div id="level-summary" class="level">
         <h2 data-key="summary-title">Summary</h2>
