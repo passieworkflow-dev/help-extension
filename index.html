@@ -38,14 +38,26 @@
           <button class="back-btn" data-back="level-main">Back</button>
         </div>
       </div>
+      <!-- level 3 WHEN WILL IT BE SHIPPED -->
+      <div id="level-when-order-shipment" class="level">
+        <h2>When will my order be shipped</h2>
+        <p>please enter your order number and e-mail</p>
+        <form id="user-order-number">
+          <label for="" data-key="order-number">Your order number:</label>
+          <input type="number" id="order-number" required>
+          <label for="email" data-key="email-label">Your email:</label>
+          <input type="email" id="email" required>
+          <button type="submit" data-key="send-btn">Send to Staff</button>
+        </form>
+      </div>
        <!-- level 3 step for ADDING TO ORDER -->
       <div id="level-add-order-confirm" class="level">
         <h2>Confirm Adding to Order</h2>
         <p>Are you sure you want to add something? This may affect shipping or pricing.</p>
         <div class="buttons">
           <button class="btn" data-next="level-add-order-details" data-summary="Yes, I want to add an item">Yes, I want to add an item</button>
-          <button class="btn" data-next="level-add-order-why-not" data-summary="No, just checking">No, just checking</button>
-          <button class="back-btn" data-back="level-order"></button>
+          <button class="btn" data-action="level-main" data-summary="No, just checking">No, just checking</button>
+          <button class="back-btn" data-back="level-order">Back</button>
         </div>
       </div>
       <!-- level 4 step for YES -->
@@ -57,7 +69,7 @@
           <button class="btn" data-next="level-add-order-quantity" data-summary="add your dad">Add your dad</button>
           <button class="btn" data-next="level-add-order-quantity" data-summary="add your sister">Add your sister</button>
           <button class="btn" data-next="level-add-order-quantity" data-summary="add your brother">Add your brother</button>
-          <button class="back-btn" data-back="level-add-order-confirm"></button>
+          <button class="back-btn" data-back="level-add-order-confirm">Back</button>
         </div>
       </div>
       <!-- level 2 product AVAILABILITY -->
@@ -65,9 +77,16 @@
         <h2 data-key="availability-title">Product availability</h2>
         <div class="buttons">
           <button class="btn" data-action="summary" data-summary="Is a certain product available">Is a certain product available</button>
-          <button class="btn" data-action="summary" data-summary="I want to order a lot">I want to order a lot</button>
+          <button class="btn" data-anext="level-order-a-lot" data-summary="I want to order a lot">I want to order a lot</button>
           <button class="btn" data-action="summary" data-summary="When is a restock of...">When is a restock of...</button>
           <button class="back-btn" data-back="level-main">Back</button>
+        </div>
+      </div>
+      <!-- level 3 for I WANT TO ORDER A LOT -->
+      <div id="level-order-a-lot" class="level">
+        <h2>What product, and how much</h2>
+        <div class="buttons">
+          <button class="btn" id="" data-next=""> </button>
         </div>
       </div>
       <div id="level-details" class="level">
