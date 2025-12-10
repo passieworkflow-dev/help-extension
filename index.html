@@ -30,7 +30,7 @@
       <div id="level-order" class="level">
         <h2 data-key="order-title">Questions about my order</h2>
         <div class="buttons""> 
-          <button class="btn" data-action="summary" data-summary="When will it be shipped">When will it be shipped</button>
+          <button class="btn" data-next="level-when-order-shipment" data-summary="When will it be shipped">When will it be shipped</button>
           <button class="btn" data-action="summary" data-summary="Has my order gone through">Has my order gone through</button>
           <button class="btn" data-action="summary" data-summary="Payment issues">Payment...</button>
           <button class="btn" data-next="level-add-order-confirm" data-summary="Can I add something to my order">Can I add something to my order</button>
@@ -49,6 +49,7 @@
           <input type="email" id="email" required>
           <button type="submit" data-key="send-btn">Send to Staff</button>
         </form>
+        <button class="back-btn" data-back="level-order">Back</button>
       </div>
        <!-- level 3 step for ADDING TO ORDER -->
       <div id="level-add-order-confirm" class="level">
