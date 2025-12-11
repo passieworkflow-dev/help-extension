@@ -200,27 +200,42 @@
       <h2>Product details</h2>
       <div class="buttons">
         <button class="btn" data-next="level-details-size">Is my size/weight compatible with...</button>
-        <button class="btn" data-next="level-details-use">Can i use X with Z?</button>
+        <button class="btn" data-next="level-details-compatible">Can i use X with Z?</button>
         <button class="btn" data-next="level-details-more">I want to know more of ...</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
     </div>
 
-<!-- Level 3: size/weight Query -->
+<!-- Level 3: Compatibility Query -->
     <div id="level-details-size" class="level">
       <h2>Fit check</h2>
        <form id="form-size">
-        <label for="product">Product:</label>
-        <select id="product" required>
-          <option value="">Choose...</option>
-          <option value="Polo Shirt">Polo Shirt</option>              <!-- continue from here-->
-        </select>
-      </form>
+        <label for="product-dropdown">Select Product:</label>
+        <select id="product-dropdown" name="product" required></select>
+          <option value="">Choose a product</option>
+          <option value="Polo Shirt">Polo Shirt</option>
+          <option value="Spraydecks">Spraydecks</option>
+          <option value="Spraydecks">Spraydecks</option>
+          <option value="Spraydecks">Spraydecks</option>
+          <option value="Spraydecks">Spraydecks</option>
+        <label for="user-size">Enter size</label>
+        <intput type="number" id="user-size" name="userSize" placeholder="e.g., 160" required></intput>
+          <button type="submit">Submit</button>
+       </form>
+          <div id="response-compatibility-size" class="response" style="display: none;"AI Response: [Simulated compatibility check result here]</div>
       <button class="back-btn" data-back="level-details">Back</button>
     </div>
+
+<!-- level 3: Compatibility Query -->
+      <div id="level-details-compatible" class="level">       <!-- continue from here-->
+        <h2>Does it fit</h2>
+        <form id="form-size-user">
+          <label for="user-size">
+        </form>
+      </div>
       
       
-<!-- Level 2: Delivery/Pick-up Sub-Questions -->
+<!-- Level 2: Delivery/Pick-up Sub-Questions -->   <!-- continue from here-->
     <div id="level-delivery" class="level">
       <h2>Delivery/pick-up</h2>
       <div class="buttons">
