@@ -201,7 +201,7 @@
       <div class="buttons">
         <button class="btn" data-next="level-details-size">Is my size/weight compatible with...</button>
         <button class="btn" data-next="level-details-compatible">Can i use X with Z?</button>
-        <button class="btn" data-next="level-details-more">I want to know more of ...</button>
+        <button class="btn" data-next="level-details-info">I want to know more of ...</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
     </div>
@@ -224,19 +224,26 @@
          <label for="user-weight">Enter weight in kg</label>
          <intput type="number" id="user-weight" name="userWeight" min="10" max="300" required></intput>
          <button type="submit">Submit</button>
-        <label for="email">Email:</label>
+        <label for="user-weight">Email:</label>
         <input type="email" id="email" required>
         </form><br>
           <button class="back-btn" data-back="level-details">Back</button>
           <div id="response-compatibility-size" class="response" style="display: none;"AI Response: [Simulated compatibility check result here]</div>
     </div>
 
-<!-- level 3: Compatibility Query -->
-      <div id="level-details-compatible" class="level">       <!-- continue from here-->
-        <h2>Does it fit</h2>
-        <form id="form-size-user">
-          <label for="user-size">
+<!-- level 3: Info Query -->
+      <div id="level-details-info" class="level">       <!-- continue from here-->
+        <h2>I want to know more of... / How big/heavy is...</h2>
+        <form id="info-form">
+          <label for="info-product-dropdown">Select a product:</label>
+          <select id="info-product-dropdown" name="product" required>
+            <option value="">Choose a product</option>
+            <option value="spraydeck">Spraydecks</option>
+            <option value="canoe">Canoe's</option>
+          </select><br>
+          <button type="submit">Submit</button>
         </form>
+        <button class="back-btn" data-back="level-details">Back</button>
       </div>
       
       
