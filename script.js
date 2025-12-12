@@ -58,8 +58,15 @@ function updateLanguage() {
 }
 
 function showLevel(levelId) {
+  // Hide all levels
   document.querySelectorAll('.level').forEach(l => l.classList.remove('active'));
-  document.getElementById(levelId).classList.add('active');
+  // Show target level (with error handling)
+  const target = document.getElementById(levelId);
+  if (target) {
+    target.classList.add('active');
+  } else {
+    console.error(`Level ID "${levelId}" not found!`);
+  }
 }
 
 function logPath(step) {
@@ -70,6 +77,9 @@ function logPath(step) {
 document.addEventListener('DOMContentLoaded', () => {
   // Load path from storage
   path = JSON.parse(sessionStorage.getItem('helpPath') || '[]');
+
+  // **FIX: Show main level on load**
+  showLevel('level-main');  
 
   // Language toggle
   document.getElementById('lang-toggle').addEventListener('click', () => {
