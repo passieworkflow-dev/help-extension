@@ -220,12 +220,12 @@
           <option value="Spraydecks">Spraydecks</option>
         </select><br>
          <label for="user-height">Enter height in cm</label>
-         <intput type="number" id="user-height" name="userHeight" min="50" max="250" required>
+         <input type="number" id="user-height" name="userHeight" min="50" max="250" required>
          <label for="user-weight">Enter weight in kg</label>
-        <input type="number" id="user-weight" name="userWeight" required>
+        <input type="number" id="user-weight" name="userWeight" min="20" max="300" required>
          <button type="submit">Submit</button>
-        <label for="user-weight">Email:</label>
-        <input type="number" id="user-weight" name="userWeight" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
         </form><br>
           <button class="back-btn" data-back="level-details">Back</button>
           <div id="response-compatibility-size" class="response" style="display: none;"AI Response: [Simulated compatibility check result here]</div>
