@@ -59,11 +59,16 @@ function updateLanguage() {
 
 function showLevel(levelId) {
   // Hide all levels
-  document.querySelectorAll('.level').forEach(l => l.classList.remove('active'));
-  // Show target level (with error handling)
+  document.querySelectorAll('#level-main > .level').forEach(l => l.classList.remove('active'));
+  // Show target level and its parents
   const target = document.getElementById(levelId);
   if (target) {
-    target.classList.add('active');
+    let current = target;
+    while (current && current.id !== 'level-main') {
+      current.classList.add('active');
+      current = current.parentElement.closest('.level');
+    }
+    document.getElementById('level-main').classList.add('active');
   } else {
     console.error(`Level ID "${levelId}" not found!`);
   }
