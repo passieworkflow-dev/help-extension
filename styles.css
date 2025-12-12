@@ -48,6 +48,9 @@
 .level.active { 
   display: block;
 }
+.level.active .level {
+  display: block;
+}
 .buttons {
   place-items: center;
   display: grid; 
