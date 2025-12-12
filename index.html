@@ -206,7 +206,7 @@
       </div>
     </div>
 
-<!-- Level 3: Compatibility Query -->
+<!-- Level 3: Compatibility Query (size/weight) -->
     <div id="level-details-size" class="level">
       <h2>Fit check</h2>
        <form id="form-size">
@@ -230,6 +230,33 @@
           <button class="back-btn" data-back="level-details">Back</button>
           <div id="response-compatibility-size" class="response" style="display: none;"AI Response: [Simulated compatibility check result here]</div>
     </div>
+
+<!-- level 3: Compatibility Query (use X with Z) -->
+      <div id="level-details-compatible" class="level">
+        <h2>Can i use X with Z</h2>
+        <form id="compatibility-use-form">
+          <label for="product1-dropdown">Select first product:</label>
+          <select id="product1-dropdown" name="product1" required>
+            <option value="">Choose a product</option>
+            <option value="spraydeck">Spraydeck</option>
+            <option value="canoe">Canoe</option>
+            <option value="paddleBlade">Paddle blade</option>
+            <option value="paddleStem">Paddle stem</option>
+            <option value="bumber">Bumper</option>
+          </select><br>
+        <form id="compatibility-use-form">
+          <label for="product2-dropdown">Select second product:</label>
+          <select id="product2-dropdown" name="product2" required>
+            <option value="">Choose a product</option>
+            <option value="spraydeck">Spraydeck</option>
+            <option value="canoe">Canoe</option>
+            <option value="paddleBlade">Paddle blade</option>
+            <option value="paddleStem">Paddle stem</option>
+            <option value="bumber">Bumper</option>
+          </select><br>
+        </form>
+          <button class="back-btn" data-back="level-details">Back</button>
+      </div>
 
 <!-- level 3: Info Query -->
       <div id="level-details-info" class="level">       <!-- continue from here-->
