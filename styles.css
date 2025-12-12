@@ -46,7 +46,7 @@
   display: none; 
 }
 .level.active { 
-  display: grid;
+  display: block;
 }
 .buttons {
   place-items: center;
