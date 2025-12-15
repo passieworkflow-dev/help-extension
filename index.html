@@ -26,6 +26,7 @@
         <button class="btn" data-next="level-contact">7. Direct contact</button>
       </div>
     </div>
+  </div>
 
 <!-- Level 2: Order Sub-Questions -->
     <div id="level-order" class="level">
@@ -38,6 +39,7 @@
         <button class="btn" data-next="level-order-wrong">I chose something wrong</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
+    </div>
 
 <!-- Level 3: Shipping Query -->
     <div id="level-order-shipping" class="level">
@@ -73,6 +75,7 @@
       <input type="radio" name="payment" value="change"> Change payment method<br>
       <button class="btn" data-next="level-order-payment-details" id="submit-payment">Next</button>
       <button class="back-btn" data-back="level-order">Back</button>
+    </div>
 
 <!-- Level 4: Payment Details -->
     <div id="level-order-payment-details" class="level">
@@ -84,7 +87,6 @@
       </form>
       <button class="back-btn" data-back="level-order-payment">Back</button>
     </div>
-  </div>
 
 <!-- Level 3: Add Query -->
     <div id="level-order-add" class="level">
@@ -118,6 +120,7 @@
         <button type="submit">Submit</button>
       </form>
       <button class="back-btn" data-back="level-order">Back</button>
+    </div>
 
 <!-- Level 4: Resolution for Wrong Choice -->
     <div id="level-order-resolution" class="level">
@@ -128,10 +131,8 @@
       <button class="btn" data-action="ai" id="submit-resolution">Submit</button>
       <button class="back-btn" data-back="level-order-wrong">Back</button>
     </div>
-  </div>
-</div>
-</div>
 
+  
 <!-- Level 2: Availability Sub-Questions -->
     <div id="level-availability" class="level">
       <h2>Product Available/Bulk</h2>
@@ -141,6 +142,7 @@
         <button class="btn" data-next="level-availability-restock">When is a restock of...</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
+    </div>
 
 <!-- Level 3: Availability Check -->
     <div id="level-availability-check" class="level">
@@ -194,8 +196,7 @@
       </form>
       <button class="back-btn" data-back="level-availability">Back</button>
     </div>
-  </div>
-</div>
+    
       
 <!-- Level 2: product details Sub-Questions -->
     <div id="level-details" class="level">
@@ -206,6 +207,7 @@
         <button class="btn" data-next="level-details-info">I want to know more of ...</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
+    </div>
 
 <!-- Level 3: Compatibility Query (size/weight) -->
     <div id="level-details-size" class="level">
@@ -273,8 +275,6 @@
         </form>
         <button class="back-btn" data-back="level-details">Back</button>
       </div>
-    </div>
-  </div>
       
       
 <!-- Level 2: Delivery/Pick-up Sub-Questions -->  
@@ -286,6 +286,7 @@
         <button class="btn" data-next="level-delivery-event">Delivery to next event</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
+    </div>
 
   <!-- Level 3: Delivery query (NL/EU/Worldwide) -->
       <div id="level-delivery-world" class="level">
@@ -296,6 +297,7 @@
           <button type="submit">Next</button>
         </form>
         <button class="back-btn" data-back="level-delivery">Back</button>
+      </div>
 
 <!-- Level 4: Delivery Details (after radio selection) -->
       <div id="level-delivery-details" class="level">
@@ -310,7 +312,6 @@
         <button class="back-btn" data-back="level-delivery-world">Back</button>
         <div id="response-delivery-details" class="response" style="display: none;">AI response: [simulated delivery info based on a address/country]</div>
       </div>
-    </div>
 
 <!-- level 3: Pickup query -->
       <div id="level-delivery-pickup" class="level">
@@ -337,8 +338,6 @@
         <div id="response-event-delivery" class="response" style="display: none;">AI Response: [Simulated event delivery info]</div>
         <button class="back-btn" data-back="level-delivery">Back</button>
       </div>
-    </div>
-  </div>
 
           
 
