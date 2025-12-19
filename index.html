@@ -347,7 +347,6 @@
       <div class="buttons">
         <button class="btn" data-next="level-events-link">Events in NL/EU</button>
         <button class="btn" data-next="level-events-test">On which event can i test or test-fit</button>
-        <button class="btn" data-next="level-events-events">Events in NL/EU</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
     </div>
@@ -364,11 +363,22 @@
         </div>
       </div>
 
-      <!-- Level 3: Where to test-->
+<!-- Level 3: Where to test-->
       <div id="level-events-test" class="level">
         <h2>These are the places where Kanopoloshop will be present</h2>
         <p>IMPORTANT! this does not mean that all the produce will be at the same event! </p>
         <p>Contact us via the form below to ask if something is possible.</p>                <!-- continue from here-->
+        <div id="event-section">
+          <h3>Upcoming Events</h3>
+          <ul id="event-list"></ul>
+          <div id="add-event-form" style="margin-top: 20px;">
+            <h4>Add New Event (For Owner)</h4>
+            <input type="date" id="event-date" required>
+            <input type="text" id="event-title" placeholeder="Event Title" required>
+            <input type="text" id="event-location" placeholder="Location" required>
+            <button id="add-event-btn">Add Event</button>
+          </div>
+        </div>
         <button class="back-btn" data-back="level-events">Back</button>
       </div>
 
