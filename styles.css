@@ -68,7 +68,14 @@
   transition: background 0.3s;
 }
 .btn:hover { 
-  background: #72abe4; 
+  background: #72abe4;
+}
+.external-link-btn {
+  background-color: #28a745;
+  color: white;
+}
+.external-link-btn:hover {
+  background-color: #218838;
 }
 .back-btn { 
   display: grid;
