@@ -51,14 +51,17 @@
 .level.active .level {
   display: block;
 }
+.level h2, .level h3, .level h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 .buttons {
   place-items: center;
   display: grid; 
-  gap: 1em
+  gap: 1em;
+  width: 100%;
 }
 .btn { 
-  display: grid; 
-  grid-template-rows: 1fr;
   width: 80%; 
   padding: 15px;
   background: #f8f9fa; 
@@ -66,21 +69,27 @@
   border-radius: 5px; 
   cursor: pointer; 
   transition: background 0.3s;
+  text-align: center;
 }
 .btn:hover { 
   background: #72abe4;
 }
+
 .external-link-btn {
-  background-color: #28a745;
+  width: 80%; 
+  padding: 15px;
+  border: 1px solid black; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background 0.3s;
+  background-color: #28a748;
   color: white;
+  text-align: center;
 }
 .external-link-btn:hover {
   background-color: #218838;
 }
 .back-btn { 
-  display: grid;
-  grid-template-rows: 1fr;
-  gap: 10px;
   width: 80%;
   padding: 15px;
   border: 1px solid black;
@@ -89,6 +98,7 @@
   transition: background 0.3s;
   background: #6c757d; 
   color: #3a393c; 
+  text-align: center;
 }
 
 .back-btn:hover { 
