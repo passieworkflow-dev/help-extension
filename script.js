@@ -97,6 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
         showLevel(back);
       }
     }
+    if (e.target.classlistner.contains('external-link-btn')) {                          //Track clicks on external link buttons
+      let count = parseInt(localStorage.getItem('clickCount-external-links') || '0');  //Get current count from localStorage (defaut to 0)
+      count++;
+      localStorage.setItem('clickCount-external-links', count);                       // save back
+      console.log(`External link clicked. Total clicks: ${count}`);                   //is optional: log to console
+    }
   });
 
   // Contact form submission
