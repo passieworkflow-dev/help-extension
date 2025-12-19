@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //delete event handler
   document.addEventListner('click', (e) => {
-    if (e.target.classList.contains('delete-event')) {
+    if (e.target && e.target.classList && e.target.classList.contains('delete-event')) {
       const index = e.target.getAttribute('data-index');
       const events = JSON.parse(localStorage.getItem('events') || '[]');
       events.splice(index, 1);
