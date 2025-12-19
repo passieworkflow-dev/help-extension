@@ -61,44 +61,35 @@
   gap: 1em;
   width: 100%;
 }
-.btn { 
-  width: 80%; 
+.btn, .external-link-btn, .back-btn {
+  min-width: 200px;
+  width: 80%;
+  max-width: 400px;
   padding: 15px;
-  background: #f8f9fa; 
-  border: 1px solid black; 
-  border-radius: 5px; 
-  cursor: pointer; 
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
   transition: background 0.3s;
   text-align: center;
+  box-sizing: border-box;
+}
+.btn { 
+  background: #f8f9fa; 
 }
 .btn:hover { 
   background: #72abe4;
 }
 
 .external-link-btn {
-  width: 80%; 
-  padding: 15px;
-  border: 1px solid black; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  transition: background 0.3s;
   background-color: #28a748;
   color: white;
-  text-align: center;
 }
 .external-link-btn:hover {
   background-color: #218838;
 }
 .back-btn { 
-  width: 80%;
-  padding: 15px;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
   background: #6c757d; 
   color: #3a393c; 
-  text-align: center;
 }
 
 .back-btn:hover { 
@@ -112,4 +103,23 @@
   width: 100%; 
   margin: 5px 0; 
   padding: 10px; 
+}
+
+
+/* smaller screens*/
+
+@media (max-width: 768px) {
+  .btn, .external-link-btn, .back-btn {
+    min-width: 150px;
+    width: 90%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn, .external-link-btn, .back-btn {
+    min-width: 120px;
+    width: 95%;
+    padding: 10px;
+  }
 }
