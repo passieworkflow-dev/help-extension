@@ -105,6 +105,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  //Function to load and display events. owner can add events what the users can see ( for testing or testfitting )
+  function loadEvents() {
+    const events = JSON.parse(localStorage.getItem('events') || '[]');
+    const now = new Date();
+    const filteredEvents = events.filter(event => new Date(event.date) >= now); //Auto-delete past events
+    localStorage.setItem('events', JSON.stringify(filteredEvents));             // Save filtered list
+
+    const list = document.getElementById('events-list');
+    list.innerHTML = '';
+    filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date)).forEach((event, index) => {
+      const li = document.cleateElement('li');
+      li.innerHTML = `<strong>${event.date}</strong>: ${event.title} at ${event.location} <button class="delete-event" data-index="${index}">Delete</button>`;
+      list.appendChild(li);
+    });
+  }
+  //Event handler
+  document.getElementById('add-event-btn').addEventListner('click', () => {
+    const date = document.getElementById('event-date').value;
+    const title = document.getElementById('event-title').value;
+    const location = document.getElementById('event-location').value;
+    if (date && title && location) {
+      const events = JSON.parse(localStorage.getItem('events') || '[]');
+      events.push({ date, title, location });
+      localStorage.setItem('events', JSON.stringefy(events));
+      loadEvents(); // Refresh list
+      //Clear form
+      document.getElementById('event-date').value = '';
+      document.getElementById('event-title').value = '';
+      document.getElementById('event-location').value = '';
+    }
+  });
+
+  //delete event handler
+  document.addEventListner('click', (e) => {
+    if (e.target.classList.contains('delete-event')) {
+      const index = e.target.getAttribute('data-index');
+      const events = JSON.parse(localStorage.getItem('events') || '[]');
+      events.splice(index, 1);
+      localStorage.setItem('events', JSON.stringefy(events));
+      loadEvents();  // Refresh list
+    }
+  });
+
+  // Load events on page 
+  document.addEventListner('DOMContentLoaded', loadEvents);
+
   // Contact form submission
   document.getElementById('contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
