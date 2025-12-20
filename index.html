@@ -363,11 +363,11 @@
         </div>
       </div>
 
-<!-- Level 3: Where to test-->
+<!-- Level 3: Where to test querry-->
       <div id="level-events-test" class="level">
         <h2>These are the places where Kanopoloshop will be present</h2>
         <p>IMPORTANT! this does not mean that all the produce will be at the same event! </p>
-        <p>Contact us via the form below to ask if something is possible.</p>                <!-- continue from here-->
+        <p>Contact us via the form below to ask if something is possible.</p>
         <div id="events-section">
           <h3>Upcoming Events</h3>
           <ul id="events-list"></ul>
@@ -383,19 +383,31 @@
       </div>
 
       
-<!-- Level 2: Teaming up Sub-Questions -->      
+<!-- Level 2: Teaming up Sub-Questions -->
     <div id="level-team" class="level">
       <h2>Teaming up</h2>
       <div class="buttons">
-        <button class="btn" data-next="level-team-together">I would love to work rogether / I have something to offer</button>
+        <button class="btn" data-next="level-team-together">I would love to work together / I have something to offer</button>
         <button class="btn" data-next="level-team-give">I would like something from you</button>
         <button class="btn" data-next="level-team-sponsor">Sponsoring</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
     </div>
 
+<!-- Level 3: Work together querry -->                      <!-- continue from here-->
+      <div id="level-team-together" class="level">
+        <h2>I would love to work together on:</h2>
+        <form id="team-up-form">
+          <label for="teaming-up">Please tell us what this is about</label>
+          <input type="text" id="teaming-up" required>
+          <button type="submit">Submit</button>
+        </form>
+        <button class="back-btn" data-back="level-team">Back</button>
+      </div>
+            
+
       
-<!-- Level 2: Direct contact Sub-Questions -->
+<!-- Level 2: Direct contact Sub-Questions -->                <!-- continue from here-->
     <div id="level-contact" class="level">
       <h2>Direct contact</h2>
       <div class="buttons">
