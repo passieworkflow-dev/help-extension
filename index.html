@@ -388,18 +388,48 @@
       <h2>Teaming up</h2>
       <div class="buttons">
         <button class="btn" data-next="level-teaming-together">I would love to work together / I have something to offer</button>
-        <button class="btn" data-next="level-teaming-give">I would like something from you</button>
         <button class="btn" data-next="level-teaming-sponsor">Sponsoring</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
     </div>
 
-<!-- Level 3: Work together querry -->                      <!-- continue from here-->
+<!-- Level 3: Work together querry -->
       <div id="level-teaming-together" class="level">
-        <h2>I would love to work together on:</h2>
-        <form id="team-up-form">
-          <label for="teaming-up">Please tell us what this is about</label>
+        <h2>I would love to work together on:</h2>                                                      <!-- This first part can be deleted-->
+        <form id="teaming-up-form">
+          <label for="teaming-up">Please tell us with what you would like to work together on!</label>
           <textarea id="teaming-up" placeholder="Describe your idea or offer" required></textarea>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" placeholder="your@email.com" required>
+          <label for="phoneNumber">Your Phone Number (optional):</label>
+          <input type="tel" id="phoneNumber" placeholder="+1234567890"><br>
+          <button type="submit">Submit</button>
+        </form>
+        <h2>I have something to offer:</h2>
+        <form id="teaming-offer-form">
+          <label for="teaming-offer">Please tell us what you would like to show/offer us!</label>
+          <textarea id="teaming-offer" placeholder="Describe what you would like to show or offer us here" required></textarea>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" placeholder="your@email.com" required>
+          <label for="phoneNumber">Your Phone Number (optional):</label>
+          <input type="tel" id="phoneNumber" placeholder="+1234567890"><br>
+          <button type="submit">Submit</button>
+        </form>
+        <br><br>
+        
+        <h2>Please select if you would like to work together, if you have something to show us where we might be interested in, or if you have something to show us!</h2>
+        <form id="teaming-up-form">
+          <label>Select something</label>
+          <input type="radio" name="option-team-up" value="work-together">I would like to work together on...<br>
+          <input type="radio" name="option-team-up" value="interested-in">I think you guys might be interested in...<br>
+          <input type="radio" name="option-team-up" value="offer-something">I have something to offer you guys!<br>
+    <!--      <input type="radio" name="option-team-up" value=""><br>            -->
+          <label for="teaming-up">Please tell us what is on your mind!</label>
+          <textarea id="teaming-up" placeholder="Describe your idea/offer or what you would like to show/provide" required></textarea>
           <label for="name">Your Name:</label>
           <input type="text" id="name" placeholder="Enter your name" required>
           <label for="email">Your Email:</label>
@@ -411,6 +441,8 @@
         <div id="response-teaming-up" class="response" style="display: none;">Thank you! We'll revieuw your proposal and get back to you soon.</div>
         <button class="back-btn" data-back="level-teaming">Back</button>
       </div>
+
+<!-- Level 3: Sponsoring querry -->                       <!-- continue from here-->
             
 
       
