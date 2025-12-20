@@ -399,9 +399,16 @@
         <h2>I would love to work together on:</h2>
         <form id="team-up-form">
           <label for="teaming-up">Please tell us what this is about</label>
-          <input type="text" id="teaming-up" required>
+          <textarea id="teaming-up" placeholder="Describe your idea or offer" required></textarea>
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" placeholder="your@email.com" required>
+          <label for="phoneNumber">Your Phone Number (optional):</label>
+          <input type="tel" id="phoneNumber" placeholder="+1234567890"><br>
           <button type="submit">Submit</button>
         </form>
+        <div id="response-team-up" class="response" style="display: none;">Thank you! We'll revieuw your proposal and get back to you soon.</div>
         <button class="back-btn" data-back="level-team">Back</button>
       </div>
             
