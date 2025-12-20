@@ -67,6 +67,21 @@ function logPath(step) {
   sessionStorage.setItem('helpPath', JSON.stringify(path));
 }
 
+ //Function to load and display events. owner can add events what the users can see ( for testing or testfitting )
+  function loadEvents() {
+    const events = JSON.parse(localStorage.getItem('events') || '[]');
+    const now = new Date();
+    const filteredEvents = events.filter(event => new Date(event.date) >= now); //Auto-delete past events
+    localStorage.setItem('events', JSON.stringify(filteredEvents));             // Save filtered list
+
+    const list = document.getElementById('events-list');
+    list.innerHTML = '';
+    filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date)).forEach((event, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<strong>${event.date}</strong>: ${event.title} at ${event.location} <button class="delete-event" data-index="${index}">Delete</button>`;
+      list.appendChild(li);
+    });
+  }
 document.addEventListener('DOMContentLoaded', () => {
   // Load path from storage
   path = JSON.parse(sessionStorage.getItem('helpPath') || '[]');
@@ -97,29 +112,22 @@ document.addEventListener('DOMContentLoaded', () => {
         showLevel(back);
       }
     }
-    if (e.target.classlistner.contains('external-link-btn')) {                          //Track clicks on external link buttons
-      let count = parseInt(localStorage.getItem('clickCount-external-links') || '0');  //Get current count from localStorage (defaut to 0)
+    if (e.target && e.target.classList && e.target.classList.contains('external-link-btn)) {
+      let count = parseInt(localStorage.getItem('clickCount-external-links') || '0');
       count++;
-      localStorage.setItem('clickCount-external-links', count);                       // save back
-      console.log(`External link clicked. Total clicks: ${count}`);                   //is optional: log to console
-    }
+      localStorage.setItem('clickCount-external-links', count);
+      console.log(`External link clicked. Total clicks: ${count}`);
+  }
+
+    if (e.target && e.target.classList && e.target.classList.contains('delete-event')) {
+    const index = e.target.getAttribute('data-index');
+    consdt events = JSON.parse(localStorage.getItem('events') || '[]');
+    events.splice(index, 1);
+    localStorage.setItem(évents', JSON.stringify(events));
+    loadEvents();
   });
 
-  //Function to load and display events. owner can add events what the users can see ( for testing or testfitting )
-  function loadEvents() {
-    const events = JSON.parse(localStorage.getItem('events') || '[]');
-    const now = new Date();
-    const filteredEvents = events.filter(event => new Date(event.date) >= now); //Auto-delete past events
-    localStorage.setItem('events', JSON.stringify(filteredEvents));             // Save filtered list
-
-    const list = document.getElementById('events-list');
-    list.innerHTML = '';
-    filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date)).forEach((event, index) => {
-      const li = document.cleateElement('li');
-      li.innerHTML = `<strong>${event.date}</strong>: ${event.title} at ${event.location} <button class="delete-event" data-index="${index}">Delete</button>`;
-      list.appendChild(li);
-    });
-  }
+ 
   //Event handler
   document.getElementById('add-event-btn').addEventListener('click', () => {
     const date = document.getElementById('event-date').value;
@@ -128,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (date && title && location) {
       const events = JSON.parse(localStorage.getItem('events') || '[]');
       events.push({ date, title, location });
-      localStorage.setItem('events', JSON.stringefy(events));
+      localStorage.setItem('events', JSON.stringify(events));
       loadEvents(); // Refresh list
       //Clear form
       document.getElementById('event-date').value = '';
@@ -138,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   //delete event handler
-  document.addEventListner('click', (e) => {
+  document.addEventListener('click', (e) => {
     if (e.target && e.target.classList && e.target.classList.contains('delete-event')) {
       const index = e.target.getAttribute('data-index');
       const events = JSON.parse(localStorage.getItem('events') || '[]');
@@ -149,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Load events on page 
-  document.addEventListner('DOMContentLoaded', loadEvents);
+  document.addEventListener('DOMContentLoaded', loadEvents);
 
   // Contact form submission
   document.getElementById('contact-form').addEventListener('submit', (e) => {
