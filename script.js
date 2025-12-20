@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('teaming-up-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    const option = document.getElementById('option-team-up').value;
+    const option = document.querySelector('input[name="option-team-up"]:checked').value;
     const details = document.getElementById('teaming-up').value;
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
