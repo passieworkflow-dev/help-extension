@@ -146,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  loadEvents();
 
   // Contact form submission
   document.getElementById('contact-form').addEventListener('submit', (e) => {
@@ -161,6 +160,22 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionStorage.removeItem('helpPath');
     showLevel('level-main');
   });
+
+  document.getElementById('team-up-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const details = document.getElementById('teaming-up').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phoneNumber').value;
+    console.log('Team-up submission:', { details, name, email, phone });
+    alert('Thank You! Your message has been sent.');
+    document.getElementById('response-team-up').style.display = 'block';
+    document.getElementById('team-up-form').reset();
+  });
+
+  // Load events on page load
+    loadEvents();
+
 
   // Initial language update
   updateLanguage();
