@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   //Event handler
-  document.getElementById('add-event-btn').addEventListner('click', () => {
+  document.getElementById('add-event-btn').addEventListener('click', () => {
     const date = document.getElementById('event-date').value;
     const title = document.getElementById('event-title').value;
     const location = document.getElementById('event-location').value;
