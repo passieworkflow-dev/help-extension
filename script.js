@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showLevel(back);
       }
     }
-    if (e.target && e.target.classList && e.target.classList.contains('external-link-btn)) {
+    if (e.target && e.target.classList && e.target.classList.contains('external-link-btn')) {
       let count = parseInt(localStorage.getItem('clickCount-external-links') || '0');
       count++;
       localStorage.setItem('clickCount-external-links', count);
@@ -121,9 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (e.target && e.target.classList && e.target.classList.contains('delete-event')) {
     const index = e.target.getAttribute('data-index');
-    consdt events = JSON.parse(localStorage.getItem('events') || '[]');
+    const events = JSON.parse(localStorage.getItem('events') || '[]');
     events.splice(index, 1);
-    localStorage.setItem(évents', JSON.stringify(events));
+    localStorage.setItem('events', JSON.stringify(events));
     loadEvents();
   });
 
@@ -145,19 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  //delete event handler
-  document.addEventListener('click', (e) => {
-    if (e.target && e.target.classList && e.target.classList.contains('delete-event')) {
-      const index = e.target.getAttribute('data-index');
-      const events = JSON.parse(localStorage.getItem('events') || '[]');
-      events.splice(index, 1);
-      localStorage.setItem('events', JSON.stringefy(events));
-      loadEvents();  // Refresh list
-    }
-  });
-
-  // Load events on page 
-  document.addEventListener('DOMContentLoaded', loadEvents);
+  loadEvents();
 
   // Contact form submission
   document.getElementById('contact-form').addEventListener('submit', (e) => {
