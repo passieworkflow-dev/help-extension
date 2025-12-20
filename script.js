@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     events.splice(index, 1);
     localStorage.setItem('events', JSON.stringify(events));
     loadEvents();
+    }
   });
 
  
