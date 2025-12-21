@@ -61,7 +61,7 @@
   gap: 1em;
   width: 100%;
 }
-.btn, .external-link-btn, .back-btn, .fast-call, .fast-email {
+.btn, .form-btn, .external-link-btn, .fast-call, .fast-email, .back-btn  {
   min-width: 200px;
   width: 80%;
   max-width: 400px;
@@ -73,11 +73,19 @@
   text-align: center;
   box-sizing: border-box;
 }
+
 .btn { 
   background: #f8f9fa; 
 }
 .btn:hover { 
   background: #72abe4;
+}
+
+.form-btn {
+  background-color: #fff0006e;
+}
+.form-btn:hover {
+  background-color: #fff000;
 }
 
 .external-link-btn {
@@ -100,7 +108,6 @@
   background: #6c757d; 
   color: #3a393c; 
 }
-
 .back-btn:hover { 
   background: blue; 
 }
