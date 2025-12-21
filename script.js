@@ -173,6 +173,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('response-teaming-up').style.display = 'block';
     document.getElementById('teaming-up-form').reset();
   });
+  
+  document.getElementById('teaming-sponsor-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const option = document.querySelector('input[name="option-team-up"]:checked').value;
+    const details = document.getElementById('teaming-up').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phoneNumber').value;
+    console.log('Teaming-up submission:', { option, details, name, email, phone });
+    alert('Thank You! Your message has been sent.');
+    document.getElementById('response-teaming-up').style.display = 'block';
+    document.getElementById('teaming-up-form').reset();
+  });
 
   // Load events on page load
     loadEvents();
