@@ -61,7 +61,7 @@
   gap: 1em;
   width: 100%;
 }
-.btn, .external-link-btn, .back-btn {
+.btn, .external-link-btn, .back-btn, .fast-call, .fast-email {
   min-width: 200px;
   width: 80%;
   max-width: 400px;
@@ -87,6 +87,15 @@
 .external-link-btn:hover {
   background-color: #218838;
 }
+
+.fast-call, .fast-email {
+  background-color: #16ff00;
+}
+.fast-call:hover, .fast-email:hover {
+  background-color: #590101;
+  color: white;
+}
+  
 .back-btn { 
   background: #6c757d; 
   color: #3a393c; 
