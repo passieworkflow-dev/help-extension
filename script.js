@@ -67,6 +67,12 @@ function logPath(step) {
   sessionStorage.setItem('helpPath', JSON.stringify(path));
 }
 
+  //Function to show phone nuber in click (in the ASAP area)
+  function showPhoneNumber() {
+    document.getElementById('phone-display') .style.display = 'block';
+    alert('Phone number revealed below. Call during business hours for urgent issues.');
+  }
+
  //Function to load and display events. owner can add events what the users can see ( for testing or testfitting )
   function loadEvents() {
     const events = JSON.parse(localStorage.getItem('events') || '[]');
@@ -82,6 +88,9 @@ function logPath(step) {
       list.appendChild(li);
     });
   }
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   // Load path from storage
   path = JSON.parse(sessionStorage.getItem('helpPath') || '[]');
@@ -191,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('teaming-sponsor-form').reset();
   });
 
-  document.getElementById('problem-contact-form').addEventListner('submit', (e) => {
+  document.getElementById('problem-contact-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const product = document.getElementById('problem-product').value;
     const name = document.getElementById('problem-user-name').value;
@@ -206,11 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load events on page load
     loadEvents();
 
-  //Function to show phone nuber in click (in the ASAP area)
-  function showPhoneNumber() {
-    document.getElementById('phone-display') .style.display = 'block';
-    alert('Phone number revealed below. Call during business hours for urgent issues.');
-  }
 
   // Initial language update
   updateLanguage();
