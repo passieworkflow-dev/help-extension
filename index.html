@@ -443,7 +443,37 @@
       </div>
 
 <!-- Level 3: Sponsoring querry -->                       <!-- continue from here-->
-            
+      <div id="level-teaming-sponsor" class="level">
+        <h2>Please let us know more about this sponsoring</h2>
+        <form id="teaming-sponsor">
+          <label>What kind of sponsoring is this</label>
+          <input type="radio" name="option-teaming-sponsor" value="team-sponsor">Sponsor our club/team<br>
+          <input type="radio" name="option-teaming-sponsor" value="logo">Logo branding on website, material or events<br>
+          <input type="radio" name="option-teaming-sponsor" value="financial">Direct monetary support for an event<br>
+          <input type="radio" name="option-teaming-sponsor" value="media">Providing advertising<br>
+          <input type="radio" name="option-teaming-sponsor" value="promo">Promoting on social media<br>
+          <input type="radio" name="option-teaming-sponsor" value="prize">Giveaways, raffels and sorts
+          <br><br>
+          <label for="sponsor-user-name">Your Name:</label>
+          <input type="text" id="sponsor-user-name" placeholder="Enter your name" required>
+          <label for="sponsor-user-email">Your Email:</label>
+          <input type="email" id="sponsor-user-email" placeholder="your@email.com" required>
+          <label for="sponsor-user-phoneNumber">Your Phone Number (optional):</label>
+          <input type="tel" id="sponsor-userphoneNumber" placeholder="+1234567890"><br>
+          <label for="teaming-sponsor">Please tell us what is on your mind!</label>
+          <textarea id="teaming-sponsor" placeholder="Describe your idea/offer or what you would like to show/provide" required></textarea>
+          <br><br>
+          <label for="sponsor-event-name">Name of the event/club/team:</label>
+          <input type="text" id="sponsor-event-name" placeholder="Enter event/club/team name" required>
+          <label for="sponsor-event-email">Email addres to contact:</label>
+          <input type="email" id="sponsor-event-email" placeholder="team.ClubOrTeam@email.com" required>
+          <label for="sponsor-event-phoneNumber">Phone Number to contact (optional):</label>
+          <input type="tel" id="sponsor-userphoneNumber" placeholder="+1234567890"><br>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="response-teaming-sponsor" class="response" style="display: none;">Thank you! We'll revieuw your proposal and get back to you soon.</div>
+        <button class="back-btn" data-back="level-teaming">Back</button>
+      </div>
 
       
 <!-- Level 2: Direct contact Sub-Questions -->                <!-- continue from here-->
