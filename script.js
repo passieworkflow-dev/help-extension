@@ -176,15 +176,20 @@ document.addEventListener('DOMContentLoaded', () => {
   
   document.getElementById('teaming-sponsor-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    const option = document.querySelector('input[name="option-team-up"]:checked').value;
-    const details = document.getElementById('teaming-up').value;
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phoneNumber').value;
-    console.log('Teaming-up submission:', { option, details, name, email, phone });
-    alert('Thank You! Your message has been sent.');
-    document.getElementById('response-teaming-up').style.display = 'block';
-    document.getElementById('teaming-up-form').reset();
+    const sponsorType = document.querySelector('input[name="option-teaming-sponsor"]:checked').value || 'None selected';
+    const userName = document.getElementById('sponsor-user-name').value;      //user details
+    const userEmail = document.getElementById('sponsor-user-email').value;
+    const userPhone = document.getElementById('sponsor-user-phoneNumber').value;
+    const eventName = document.getElementById('sponsor-event-name').value;      //event details
+    const eventEmail = document.getElementById('sponsor-event-email').value;
+    const eventPhone = document.getElementById('sponsor-event-phoneNumber').value;
+    
+    const details = document.getElementById('sponsor-details').value;
+    
+    console.log('Sponsoring submission:', { sponsorType, userName, userPhone, evnetName, eventEmail, eventPhone, details });
+    alert('Thank You! Your sponsoring proposal has been sent.');
+    document.getElementById('response-teaming-sponsor').style.display = 'block';
+    document.getElementById('teaming-sponsor-form').reset();
   });
 
   // Load events on page load
