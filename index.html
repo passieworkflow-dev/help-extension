@@ -481,11 +481,47 @@
       <h2>Direct contact</h2>
       <div class="buttons">
         <button class="btn" data-next="level-contact-problem">I have a problem ...</button>
-        <button class="btn" data-next="level-contact-question">I have a question</button>
         <button class="btn" data-next="level-contact-asap">I need help ASAP</button>
         <button class="back-btn" data-back="level-main">Back</button>
       </div>
     </div>
+
+<!-- Level 3: I have a problem query -->                <!-- continue from here to put in to the script-->
+      <div id="level-contact-problem" class="level">
+        <h2>When having a problem with a product</h2>
+        <form id="problem-contact-form">
+          <label for="problem-product">Select Product:</label>
+        <select id="problem-product" required>
+          <option value=""></option>
+          <option value="Polo Shirt">Polo Shirt</option>
+          <option value="Spraydeckt">Spraydeck</option>
+          <option value="Canoe">Canoe</option>
+        </select>
+          <label for="problem-user-name">Your Name:</label>
+          <input type="name" id="problem-user-name" required><br>
+          <label for="problem-email">Email for Notification:</label>
+          <input type="email" id="problem-email" required><br>
+          <button type="submit">Check</button>
+        </form>
+          <div id="response-teaming-sponsor" class="response" style="display: none;">Thank you! We'll review your proposal and get back to you soon.</div>
+          <button class="back-btn" data-back="level-contact">Back</button>
+      </div>
+
+<!-- level 3: Needing help ASAP -->
+      <div id="level-contact-asap" class="level">
+        <h2>Fast contact to the owners here!</h2>
+        <p>NOTE! this is for fast service with problems that cant wait more then a day!</p>
+        <p>Please try the previous button options first!</p>
+        <p>Can put more notes here</p>
+        <div class="buttons">
+          <button class="fast-email" onclick="window.location.href='mailto:owner@example.com?subject=URGENT%20Contact%20-%20That%20Can%27t%20Wait&body=Please%20describe%20your%20urgent%20issue%20here.'">Send Urgent Email</button>
+          <button class="fast-call" onclick="showPhoneNumber()">Call Now</button>
+        </div>
+        <div id="phone-display" style="display: none; margin-top: 20px;">
+          <p>Call us at: <strong>+31 6 1234 5678</strong>(Available 8 AM - 5 PM</p>
+        </div>
+        <button class="back-btn" data-back="level-contact">Back</button>
+      </div>
 
     
 <!-- Continue for other categories (Details, Delivery, Events, Teaming, Contact) with similar structure: buttons to sub-levels, forms for input, dropdowns for known options. For brevity, focus on key ones above. -->
