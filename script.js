@@ -195,6 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load events on page load
     loadEvents();
 
+  //Function to show phone nuber in click (in the ASAP area)
+  function showPhoneNumber() {
+    document.getElementById('phone-display') .style.display = 'block';
+    alert('Phone number revealed below. Call during business hours for urgent issues.');
+  }
 
   // Initial language update
   updateLanguage();
