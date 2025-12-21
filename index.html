@@ -48,7 +48,7 @@
         <input type="text" id="order-number" required>
         <label for="email">Email:</label>
         <input type="email" id="email" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-btn">Submit</button>
       </form>
       <button class="back-btn" data-back="level-order">Back</button>
     </div>
@@ -61,7 +61,7 @@
         <input type="text" id="order-number" required>
         <label for="email">Email:</label>
         <input type="email" id="email" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-btn">Submit</button>
       </form>
       <button class="back-btn" data-back="level-order">Back</button>
     </div>
@@ -72,7 +72,7 @@
       <label>What do you need?</label><br>
       <input type="radio" name="payment" value="view" required> View payment options<br>
       <input type="radio" name="payment" value="change"> Change payment method<br>
-      <button class="btn" data-next="level-order-payment-details" id="submit-payment">Next</button>
+      <button class="btn" class="form-btn" data-next="level-order-payment-details" id="submit-payment">Next</button>
       <button class="back-btn" data-back="level-order">Back</button>
     </div>
 
@@ -82,7 +82,7 @@
       <form id="form-payment-details">
         <label for="payment-method">Preferred Payment Method:</label>
         <input type="text" id="payment-method" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-btn">Submit</button>
       </form>
       <button class="back-btn" data-back="level-order-payment">Back</button>
     </div>
@@ -103,7 +103,7 @@
         </select>
         <label for="amount">Amount:</label>
         <input type="number" id="amount" min="1" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-btn">Submit</button>
       </form>
       <button class="back-btn" data-back="level-order">Back</button>
     </div>
@@ -116,7 +116,7 @@
         <input type="text" id="order-number" required>
         <label for="email">Email:</label>
         <input type="email" id="email" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-btn">Submit</button>
       </form>
       <button class="back-btn" data-back="level-order">Back</button>
     </div>
@@ -127,7 +127,7 @@
       <label>What would you like?</label><br>
       <input type="radio" name="resolution" value="refund"> Refund or Voucher<br>
       <input type="radio" name="resolution" value="cant"> Can't help<br>
-      <button class="btn" data-action="ai" id="submit-resolution">Submit</button>
+      <button class="btn" class="form-btn" data-action="ai" id="submit-resolution">Submit</button>
       <button class="back-btn" data-back="level-order-wrong">Back</button>
     </div>
 
@@ -154,7 +154,7 @@
         </select>
         <label for="email">Email for Notification:</label>
         <input type="email" id="email" required>
-        <button type="submit">Check</button>
+        <button type="submit" class="form-btn">Check</button>
       </form>
       <button class="back-btn" data-back="level-availability">Back</button>
     </div>
@@ -172,7 +172,7 @@
         <input type="number" id="amount" min="1" required>
         <label for="email">Email:</label>
         <input type="email" id="email" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-btn">Submit</button>
       </form>
       <button class="back-btn" data-back="level-availability">Back</button>
     </div>
@@ -191,7 +191,7 @@
         <input type="radio" name="notify" value="no"> No<br>
         <label for="email">Email:</label>
         <input type="email" id="email" required>
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-btn">Submit</button>
       </form>
       <button class="back-btn" data-back="level-availability">Back</button>
     </div>
@@ -225,7 +225,7 @@
          <input type="number" id="user-height" name="userHeight" min="50" max="250" required>
          <label for="user-weight">Enter weight in kg</label>
         <input type="number" id="user-weight" name="userWeight" min="20" max="300" required>
-         <button type="submit">Submit</button>
+         <button type="submit" class="form-btn">Submit</button>
         <label for="email">Email:</label>
         <input type="email" id="email" required>
         </form><br>
@@ -270,7 +270,7 @@
             <option value="spraydeck">Spraydecks</option>
             <option value="canoe">Canoe's</option>
           </select><br>
-          <button type="submit">Submit</button>
+          <button type="submit" class="form-btn">Submit</button>
         </form>
         <button class="back-btn" data-back="level-details">Back</button>
       </div>
@@ -293,7 +293,7 @@
         <form id="delivery-world-radio">
           <label><input type="radio" name="query-type" value="duration" required> Duration</label><br>
           <label><input type="radio" name="query-type" value="costs" required> Costs</label><br>
-          <button type="submit">Next</button>
+          <button type="submit" class="form-btn">Next</button>
         </form>
         <button class="back-btn" data-back="level-delivery">Back</button>
       </div>
@@ -306,7 +306,7 @@
           <input type="text" id="address" name="address" placeholder="Enter address" required><br>
           <label for="country">Country:</label>
           <input type="text" id="country" name="country" placeholder="Enter country" required><br>
-          <button type="submit">Submit</button>
+          <button type="submit" class="form-btn">Submit</button>
         </form>
         <button class="back-btn" data-back="level-delivery-world">Back</button>
         <div id="response-delivery-details" class="response" style="display: none;">AI response: [simulated delivery info based on a address/country]</div>
@@ -320,7 +320,7 @@
           <input type="email" id="email" name="email" placeholder="your@email.com" required><br>
           <label for="phone">Phone:</label>
           <input type="tel" id="phone" name="phone" placeholder="+31612345678" required><br>
-          <button type="submit">Submit</button>
+          <button type="submit" class="form-btn">Submit</button>
         </form>
         <div id="response-pickup" class="response" style="display: none;">Response: [Simulated pickup confirmation]</div>
         <button class="back-btn" data-back="level-delivery">Back</button>
@@ -332,7 +332,7 @@
         <form id="event-delivery-radio">
           <label><input type="radio" name="event-query" value="pickup" required> yes for pickup</label><br>
           <label><input type="radio" name="event-query" value="costs" required> Costs</label><br>
-          <button type="submit">Submit</button>
+          <button type="submit" class="form-btn">Submit</button>
         </form>
         <div id="response-event-delivery" class="response" style="display: none;">AI Response: [Simulated event delivery info]</div>
         <button class="back-btn" data-back="level-delivery">Back</button>
@@ -405,7 +405,7 @@
           <input type="email" id="email" placeholder="your@email.com" required><br>
           <label for="phoneNumber">Your Phone Number (optional):</label>
           <input type="tel" id="phoneNumber" placeholder="+1234567890"><br>
-          <button type="submit">Submit</button>
+          <button type="submit" class="form-btn">Submit</button>
         </form>
         <h2>I have something to offer:</h2>
         <form id="teaming-offer-form">
@@ -417,7 +417,7 @@
           <input type="email" id="email" placeholder="your@email.com" required><br>
           <label for="phoneNumber">Your Phone Number (optional):</label>
           <input type="tel" id="phoneNumber" placeholder="+1234567890"><br>
-          <button type="submit">Submit</button>
+          <button type="submit" class="form-btn">Submit</button>
         </form>
         <br><br>
         
@@ -436,7 +436,7 @@
           <input type="email" id="email" placeholder="your@email.com" required><br>
           <label for="phoneNumber">Your Phone Number (optional):</label>
           <input type="tel" id="phoneNumber" placeholder="+1234567890"><br>
-          <button type="submit">Submit</button>
+          <button type="submit" class="form-btn">Submit</button>
         </form>
         <div id="response-teaming-up" class="response" style="display: none;">Thank you! We'll review your proposal and get back to you soon.</div>
         <button class="back-btn" data-back="level-teaming">Back</button>
@@ -469,7 +469,7 @@
           <input type="email" id="sponsor-event-email" placeholder="team.ClubOrTeam@email.com" required><br>
           <label for="sponsor-event-phoneNumber">Phone Number to contact (optional):</label>
           <input type="tel" id="sponsor-event-phoneNumber" placeholder="+1234567890"><br>
-          <button type="submit">Submit</button>
+          <button type="submit" class="form-btn">Submit</button>
         </form>
         <div id="response-teaming-sponsor" class="response" style="display: none;">Thank you! We'll review your proposal and get back to you soon.</div>
         <button class="back-btn" data-back="level-teaming">Back</button>
@@ -501,7 +501,7 @@
           <input type="text" id="problem-user-name" required><br>
           <label for="problem-email">Email for Notification:</label>
           <input type="email" id="problem-email" required><br>
-          <button type="submit">Check</button>
+          <button type="submit" class="form-btn">Check</button>
         </form>
           <div id="response-problem" class="response" style="display: none;">Thank you! We'll review your proposal and get back to you soon.</div>
           <button class="back-btn" data-back="level-contact">Back</button>
@@ -603,7 +603,7 @@
           <input type="email" id="email" required>
           <label for="message" data-key="message-label">Additional details:</label>
           <textarea id="message"></textarea>
-          <button type="submit" data-key="send-btn">Send to Staff</button>
+          <button type="submit" class="form-btn" data-key="send-btn">Send to Staff</button>
         </form>
         <button class="back-btn" data-back="level-main">Back to Start</button>
       </div>
