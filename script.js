@@ -183,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const eventName = document.getElementById('sponsor-event-name').value;      //event details
     const eventEmail = document.getElementById('sponsor-event-email').value;
     const eventPhone = document.getElementById('sponsor-event-phoneNumber').value;
-    
     const details = document.getElementById('sponsor-details').value;
     
     console.log('Sponsoring submission:', { sponsorType, userName, userPhone, evnetName, eventEmail, eventPhone, details });
@@ -191,6 +190,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('response-teaming-sponsor').style.display = 'block';
     document.getElementById('teaming-sponsor-form').reset();
   });
+
+  document.getElementById('problem-contact-form').addEventListner('submit', (e) => {
+    e.preventDefault();
+    const product = document.getElementById('problem-product').value;
+    const name = document.getElementById('problem-user-name').value;
+    const email = document.getElementById('problem-email').value;
+    console.log('Problem report:', { product, name, email });
+    alert('Thank you! Your problem report has been submitted.');
+    document.getElementById('response-problem').style.display = 'block';
+    document.getElementById('problem-contact-form').reset();
+  });
+                
 
   // Load events on page load
     loadEvents();
