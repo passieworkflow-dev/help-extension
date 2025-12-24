@@ -43,7 +43,9 @@
   background: red; 
 }
 .level { 
-  display: none; 
+  display: none;
+  justify-items: center;
+  text-align: center;
 }
 .level.active { 
   display: block;
@@ -56,9 +58,10 @@
   margin-bottom: 20px;
 }
 .buttons {
-  place-items: center;
-  display: grid; 
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1em;
+  align-items: center;
   width: 100%;
 }
 .btn, .form-btn, .external-link-btn, .fast-call, .fast-email, .back-btn {
@@ -81,12 +84,6 @@
   background: #72abe4;
 }
 
-.form-btn {
-  background-color: #fff0006e;
-}
-.form-btn:hover {
-  background-color: #fff000;
-}
 
 .external-link-btn {
   background-color: #28a748;
@@ -112,6 +109,38 @@
   background: blue; 
 }
 
+.form-container {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+}
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-container textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.form-container .form-btn {
+  display: block;
+  margin: 20px auto 0;
+  width: auto;
+  min-width: 150px;
+  max-width: 200px;
+}
+.form-btn {
+  background-color: #fff0006e;
+}
+.form-btn:hover {
+  background-color: #fff000;
+}
+
 #contact-form { 
   margin-top: 20px; 
 }
@@ -130,6 +159,13 @@
     width: 90%;
     padding: 12px;
   }
+  .form-container {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  .form-container input, .form-container select, .form-container textarea {
+    padding: 8px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -137,5 +173,9 @@
     min-width: 120px;
     width: 95%;
     padding: 10px;
+  }
+  .form-container {
+    padding: 10px;
+    margin: 10px 0;
   }
 }
