@@ -50,6 +50,8 @@ const translations = {
   }
 };
 
+const sidebar = document.getElementById('sidebar')
+
 function updateLanguage() {
   document.querySelectorAll('[data-key]').forEach(el => {
     const key = el.getAttribute('data-key');
