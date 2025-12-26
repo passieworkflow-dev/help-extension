@@ -1,8 +1,57 @@
-#help-widget-container {
-  position: fixed; 
-  bottom: 20px; 
-  right: 20px; 
-  z-index: 1000; 
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas: 
+  "navbar navbar"
+  "sidebar main"
+  "sidebar footer";
+}
+nav {
+  top: 0;
+  position: sticky;
+  grid-area: navbar;
+  background-color: blue;
+  border: 2px solid red;
+}
+aside {
+  height: calc(100vh - 21.6px);   /* full height with the height of the navbar retracted*/
+  top: 21.6px; /*the height of the navbar*/ 
+  position: sticky;
+  align-self: start;
+  grid-area: sidebar;
+  background-color: green;
+  border: 2px solid red;
+}
+main {
+  grid-area: main;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+}
+footer {
+  grid-area: footer;
+  background-color: orange;
+  padding: 10px;
+  border: 2px solid red;
+
+}
+
+#help-widget-content {
+  width: 100%;
+  max-width: 600px;
+  z-index: 1000;
+}
+#help-widget {
+  width: 100%;
+  z-index: 1;
 }
 .help-toggle { 
   background: #007bff; 
@@ -44,11 +93,11 @@
 }
 .level { 
   display: none;
-  justify-items: center;
-  text-align: center;
 }
 .level.active { 
-  display: block;
+  display: grid;
+  justify-items: center;
+  text-align: center;
 }
 .level.active .level {
   display: block;
@@ -62,6 +111,7 @@
   grid-template-columns: 1fr;
   gap: 1em;
   align-items: center;
+  justify-items: center;
   width: 100%;
 }
 .btn, .form-btn, .external-link-btn, .fast-call, .fast-email, .back-btn {
@@ -140,6 +190,9 @@
 .form-btn:hover {
   background-color: #fff000;
 }
+.radio {
+  text-align: left;
+}
 
 #contact-form { 
   margin-top: 20px; 
@@ -151,9 +204,21 @@
 }
 
 
+
 /* smaller screens*/
 
 @media (max-width: 768px) {
+  body{
+    grid-template-columns: 1fr;
+  }
+  aside{
+    position: fixed;
+    width: 300px;
+    display: none;
+  }
+  .show{
+    display: block;
+  }
   .btn, .external-link-btn, .back-btn {
     min-width: 150px;
     width: 90%;
