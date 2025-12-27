@@ -55,6 +55,10 @@ const sidebar = document.getElementById('sidebar')
 function toggleSidebar() {
   sidebar.classList.toggle('show')
 }
+function toggleSubMenu(button) {
+  button.nextElementSibling.classList.toggle('show')
+  button.classList.toggle('rotate')
+}
 
 function updateLanguage() {
   document.querySelectorAll('[data-key]').forEach(el => {
