@@ -209,16 +209,17 @@ footer {
 
 @media (max-width: 768px) {
   body{
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
   }
   aside{
     position: fixed;
-    width: 300px;
+    width: 200px;
     display: none;
+    z-index: 10;
   }
   .show{
     display: block;
-  }
+  } 
   .btn, .external-link-btn, .back-btn {
     min-width: 150px;
     width: 90%;
