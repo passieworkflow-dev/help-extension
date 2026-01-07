@@ -58,7 +58,7 @@ function toggleSidebar() {
   toggleButton.classList.toggle('rotate')
 
   Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-    ul.classList.romove('show')
+    ul.classList.remove('show')
     ul.previousElementSibling.classList.remove('rotate')
   })
 }
