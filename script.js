@@ -50,10 +50,12 @@ const translations = {
   }
 };
 
+const toggleButton = document.getElementById('toggle-btn')
 const sidebar = document.getElementById('sidebar')
 
 function toggleSidebar() {
-  sidebar.classList.toggle('show')
+  sidebar.classList.toggle('close')
+  toggleButton.classList.toggle('rotate')
 }
 function toggleSubMenu(button) {
   button.nextElementSibling.classList.toggle('show')
