@@ -52,6 +52,8 @@ aside {
   top: 0;
   align-self: start;
   transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;
 }
 #sidebar.close{
   padding: 5px;
