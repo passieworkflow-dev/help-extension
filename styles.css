@@ -118,8 +118,21 @@ aside {
 #sidebar .sub-menu {
   padding-left: 2em;
 }
+#toggle-btn {
+  margin-left: auto;
+  padding: 1em;
+  border: none;
+  border-radius: .5em;
+  background: none;
+  cursor: pointer;
 
-
+  svg{
+    transition: rotate 150ms ease;
+  }
+}
+#toggle-btn:hover {
+background-color: var(--hover-clr);  
+}
 
 
 main {
